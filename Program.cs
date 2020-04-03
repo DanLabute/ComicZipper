@@ -31,7 +31,7 @@ namespace ComicZipper
                     ZipFile.CreateFromDirectory(folderName, zipName);
                     Console.WriteLine("Created Zip: " + zipName);
                     sourceFileName = s;
-                    destFileName = Path.GetDirectoryName(s) + @"\" + Path.GetFileNameWithoutExtension(s) + ".cbz";
+                    destFileName = Path.GetDirectoryName(s) + @"\" + Path.GetFileNameWithoutExtension(zipName) + ".cbz";
                     if (!File.Exists(destFileName))
                     {
                         System.IO.File.Move(zipName, destFileName);
